@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>workshop 27</h1>
+    <form method="POST" action="/review">
+        <div class="mb-3 mt-3">
+            <label for="name" class="form-label">Name:</label>
+            <input required type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+          </div>
+          <div class="mb-3 mt-3">
+            <label for="establishmentType" class="form-label">Rating:</label>
+            <select name="rating" id="rating" style="width:10%">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+          <div class="mb-3 mt-3">
+            <label for="comment" class="form-label">Comment:</label>
+            <input type="text" class="form-control" id="comment" placeholder="Enter comment" name="comment">
+          </div>
+          <div class="mb-3 mt-3">
+            <label for="gameId" class="form-label">Game ID:</label>
+            <input type="text" class="form-control" id="gameId" placeholder="Enter gameId" name="gameId">
+          </div>
+          <div class="mb-3 mt-3">
+            <label for="boardgameName" class="form-label">Boardgame Name:</label>
+            <input type="text" class="form-control" id="boardgameName" placeholder="Enter boardgameName" name="boardgameName">
+          </div>
+        <button type="submit" class="btn btn-secondary">Post Review!</button>
+      </form>
+</body>
+</html>
