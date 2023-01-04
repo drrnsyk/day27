@@ -19,7 +19,7 @@ public class Review {
     private String rating;
     private String comment;
     private String id;
-    private String gameId;
+    private Integer gameId;
     private LocalDateTime posted;
     private String boardgameName;
     // to fulfill part b, two new attributes needs to be added
@@ -32,7 +32,7 @@ public class Review {
     public Review() {
     }
 
-    public Review(String user, String rating, String comment, String gameId, String boardgameName) {
+    public Review(String user, String rating, String comment, Integer gameId, String boardgameName) {
         this.user = user;
         this.rating = rating;
         this.comment = comment;
@@ -66,10 +66,10 @@ public class Review {
     public void setId(String id) {
         this.id = id;
     }
-    public String getGameId() {
+    public Integer getGameId() {
         return gameId;
     }
-    public void setGameId(String gameId) {
+    public void setGameId(Integer gameId) {
         this.gameId = gameId;
     }
     public LocalDateTime getPosted() {
@@ -111,7 +111,7 @@ public class Review {
         review.setUser(d.getString("user"));
         review.setRating(d.getString("rating"));
         review.setId(d.getObjectId("_id").toString());
-        review.setGameId(d.getString("gameId"));
+        review.setGameId(d.getInteger("gameId"));
         review.setComment(d.getString("comment"));
         LocalDateTime postedDt = Instant.ofEpochMilli(d.getDate("posted").getTime())
                 .atZone(ZoneId.systemDefault())

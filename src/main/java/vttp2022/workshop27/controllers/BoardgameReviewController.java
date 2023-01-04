@@ -23,7 +23,7 @@ public class BoardgameReviewController {
         String user = form.getFirst("name");
         String rating = form.getFirst("rating");
         String comment = form.getFirst("comment");
-        String gameId = form.getFirst("gameId");
+        Integer gameId = Integer.parseInt(form.getFirst("gameId"));
         String boardgameName = form.getFirst("boardgameName");
 
         Review review = new Review(user, rating, comment, gameId, boardgameName);
